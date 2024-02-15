@@ -10,7 +10,7 @@ restServer.use(cors())
 restServer.use(express.json())
 restServer.use(router)
 
-const PORT = 3000
+const PORT = 3000 || process.env.PORT
 restServer.listen(PORT,()=>{
     console.log(`Restaruant Server has started at port ${PORT} `);
 })
